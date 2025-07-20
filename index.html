@@ -1,301 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-       @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Pacifico&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Letter</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Pacifico&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h2 {
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
-    position: absolute;
-    font-size: 35px;
-    top: 85%;
-    left: 30%;
-    animation: name 5s linear 1;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-color: white;
-}
-
-.container {
-    width: 90vw;
-    height: 90vh;
-    overflow: hidden;
-    border: 3px dashed black;
-    perspective: 1000px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 3px 3px;
-}
-
-.b1 {
-    position: absolute;
-    top: 1%;
-    left: 1%;
-    animation: baloon 5s ease 1,
-    rotate 2s ease infinite;
-    transform-style: preserve-3d;
-}
-.b2 {
-    position: absolute;
-    top: 1%;
-    left: 20%;
-    animation: baloon 5s ease-in 1,
-    rotate 2s ease-in infinite;
-    transform-style: preserve-3d;
-}
-.b3 {
-    position: absolute;
-    top: 1%;
-    left: 40%;
-    animation: baloon 5s linear 1,
-    rotate 2s linear infinite;
-    transform-style: preserve-3d;
-}
-.b4 {
-    position: absolute;
-    top: 1%;
-    left: 60%;
-    animation: baloon 5s ease-in-out 1,
-    rotate 2s ease-in-out infinite;
-    transform-style: preserve-3d;
-}
-.b5 {
-    position: absolute;
-    top: 1%;
-    left: 80%;
-    animation: baloon 5s ease-out 1,
-    rotate 2s ease-out infinite;
-    transform-style: preserve-3d;
-}
-
-.hbd {
-    position: absolute;
-    top: 5%;
-    z-index: -1;
-    animation: hbd 5s ease-out 1;
-}
-.cake {
-    position: absolute;
-    top: 40%;
-    animation: cake 5s linear 1;
-}
-
-.mail {
-    transform: rotateZ(-20deg);
-    animation: mail 1s linear infinite,
-    mail2 5s linear 1;
-}
-
-.popup {
-    width: 90%;
-    height: 85%;
-    display: none;
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    background-color: white;
-    border: 2px solid black;
-    box-shadow: 0 0 2px 2px;
-}
-
-.popup > div:nth-child(1) {
-    width: 2px;
-    height: 100%;
-    background-color: black;
-    position: absolute;
-    left: 10%;
-}
-.popup > div:nth-child(2) {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    top: 10%;
-}
-.popup > div:nth-child(3) {
-    width: 85%;
-    height: 85%;
-    position: absolute;
-    top: 13%;
-    left: 13%;
-}
-.popup > div:nth-child(3) > div > p {
-   font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 13.5px;
-  text-align: justify;
-  color: black;
-}
-.popup > div:nth-child(3) > div > .img2 {
-   position: absolute;
-   top: 35%;
-   left: 40%;
-}
-
-button {
-    position: fixed;
-    top: 83%;
-    left: 40%;
-    padding: 2px 10px;
-    background-color: white;
-    border: 2px solid black;
-    color: purple;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-h3 {
-    position: absolute;
-    top: 70%;
-    left: 20%;
-}
-.close {
-    position: fixed;
-    top: 83%;
-    left: 45%;
-    padding: 2px 10px;
-    background-color: white;
-    border: 2px solid black;
-    color: purple;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-
-@keyframes mail {
-    0% {
-        transform: rotateZ(-20deg);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    50% {
-        transform: rotateZ(-40deg);
-    }
-    75% {
-        transform: rotateZ(0deg);
-    }
-    100% {
-        transform: rotateZ(-20deg);
-    }
-}
 
-@keyframes mail2 {
-    0% {
-        left: 120%;
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      font-family: 'EB Garamond', serif;
     }
-    100% {
-        left: 70%;
-    }
-}
 
-@keyframes name {
-    0% {
-        top: 110%;
+    .container {
+      width: 95vw;
+      max-width: 700px;
+      height: 95vh;
+      max-height: 1000px;
+      overflow: hidden;
+      border: 2px dashed black;
+      perspective: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
     }
-    100% {
-        top: 85%;
-    }
-}
 
-@keyframes cake {
-    0% {
-        top: 110%;
+    h2 {
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      font-size: 6vw;
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: name 5s linear 1;
     }
-    100% {
-        top: 40%;
-    }
-}
 
-@keyframes hbd {
-    0% {
-        top: -100%;
+    .b1, .b2, .b3, .b4, .b5 {
+      position: absolute;
+      top: 1%;
+      width: 15vw;
+      max-width: 60px;
+      animation: baloon 5s ease-in 1, rotate 2s linear infinite;
+      transform-style: preserve-3d;
     }
-    100% {
-        top: 5%;
+
+    .b1 { left: 2%; }
+    .b2 { left: 20%; }
+    .b3 { left: 40%; }
+    .b4 { left: 60%; }
+    .b5 { left: 78%; }
+
+    .hbd {
+      position: absolute;
+      top: 5%;
+      width: 60%;
+      animation: hbd 5s ease-out 1;
+      z-index: -1;
     }
-}
-@keyframes baloon{
-    0% {
-        top: 110%;
+
+    .cake {
+      position: absolute;
+      top: 40%;
+      width: 70%;
+      animation: cake 5s linear 1;
     }
-    100% {
-        top: 1%;
+
+    .mail {
+      transform: rotateZ(-20deg);
+      animation: mail 1s linear infinite, mail2 5s linear 1;
+      max-width: 30%;
+      position: relative;
+      top: 330%;
+      left: 70%;
     }
-}
-@keyframes rotate{
-    0% {
-        transform: rotateY(0deg);
+
+    .popup {
+      width: 90%;
+      height: 85%;
+      display: none;
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      background-color: white;
+      border: 2px solid black;
+      box-shadow: 0 0 2px 2px;
+      padding: 10px;
     }
-    100% {
-        transform: rotateY(360deg);
+
+    .popup > div:nth-child(1),
+    .popup > div:nth-child(2) {
+      display: none;
     }
-} 
-    </style>
+
+    .popup > div:nth-child(3) {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .popup p {
+      font-size: 3.8vw;
+      text-align: justify;
+      color: black;
+    }
+
+    button, .close {
+      padding: 6px 12px;
+      background-color: white;
+      border: 2px solid black;
+      color: purple;
+      font-weight: bold;
+      font-size: 4vw;
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 4.5vw;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .img2 {
+      position: relative;
+      top: 10px;
+      display: block;
+      margin: 10px auto;
+      width: 70%;
+    }
+
+    @keyframes mail {
+      0% { transform: rotateZ(-20deg); }
+      50% { transform: rotateZ(-40deg); }
+      75% { transform: rotateZ(0deg); }
+      100% { transform: rotateZ(-20deg); }
+    }
+
+    @keyframes mail2 {
+      0% { left: 120%; }
+      100% { left: 70%; }
+    }
+
+    @keyframes name {
+      0% { top: 110%; }
+      100% { top: 85%; }
+    }
+
+    @keyframes cake {
+      0% { top: 110%; }
+      100% { top: 40%; }
+    }
+
+    @keyframes hbd {
+      0% { top: -100%; }
+      100% { top: 5%; }
+    }
+
+    @keyframes baloon {
+      0% { top: 110%; }
+      100% { top: 1%; }
+    }
+
+    @keyframes rotate {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    @media (min-width: 768px) {
+      h2 { font-size: 35px; }
+      button, .close { font-size: 14px; }
+      .popup p { font-size: 14px; }
+      h3 { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="baloons">
-            <img class="b1" src="https://i.postimg.cc/hvL7WpkX/balloon-5.png" alt="baloons" style="max-width: 18%;">
-        <img class="b2" src="https://i.postimg.cc/cCPZhS9Y/balloon-11.png" alt="baloons" style="max-width: 18%;">
-        <img class="b3" src="https://i.postimg.cc/MHnq1TDq/balloon-12.png" alt="baloons" style="max-width: 18%;">
-        <img class="b4" src="https://i.postimg.cc/FKxr4wz5/balloon-13.png" alt="baloons" style="max-width: 18%;">
-        <img class="b5" src="https://i.postimg.cc/26cCqvn0/balloon-9.png" alt="baloons" style="max-width: 18%;">
-        </div>
-        <img class="hbd" src="https://i.postimg.cc/FsCjVnVZ/happy-birthday.png" alt="happy-birthday" style="max-width: 60%;">
-        <img class="cake" src="https://i.postimg.cc/KzycTLpb/cake.png" alt="cake" style="max-width: 70%;">
-        <div class="mail-section">
-            <img onclick="mail()" id="mail-section" class="mail" src="https://i.postimg.cc/gjXyzpPS/mail.png" alt="mail" style="max-width: 30%; position: relative; top: 330%; left: 70%;">
-            <div class="popup" id="popup">
-                <div></div>
-                <div></div>
-                <div>
-                    <div id="changeHtml">
-                        <p>Dear Mowmita,
-                        <br>
-                        First of all wishing you a very happy birthday. Amader modhe hoyto oivabe daily kotha hoy na, but anyway we are good friends. Actually tumi o busy thako saradin tomar porashuna niye and amio amar programming journey niye. Atodin porjonto ja ja shikhlam oituku diye try korlam akta wishing letter bananor jonno. Hoyto oto valo banaite pari nai karon akhono onek kisuy ami jani na, but i wish i will do better next time. Tomar kemon lagse jani na. But hey, it's a new day for you! Happy Birthday Mowmita.... 
-                    </p>
-                   
-                    <button onclick="change()">Next Page</button>
-                </div>
-            </div>
-        </div>
-        <h2 id="name">Mowmita</h2>
+  <div class="container">
+    <div class="baloons">
+      <img class="b1" src="https://i.postimg.cc/hvL7WpkX/balloon-5.png" alt="b1">
+      <img class="b2" src="https://i.postimg.cc/cCPZhS9Y/balloon-11.png" alt="b2">
+      <img class="b3" src="https://i.postimg.cc/MHnq1TDq/balloon-12.png" alt="b3">
+      <img class="b4" src="https://i.postimg.cc/FKxr4wz5/balloon-13.png" alt="b4">
+      <img class="b5" src="https://i.postimg.cc/26cCqvn0/balloon-9.png" alt="b5">
     </div>
-    <script>
-        function mail() {
-    document.getElementById("popup").style.display = "block";
-    document.getElementById("name").style.display = "none";
-    document.getElementById("mail-section").style.display = "none";
-}
-function change() {
-    document.getElementById("changeHtml").innerHTML = `
-        <img src="https://i.postimg.cc/G3JH6Pmy/PXL-20240523-093510007.jpg" alt="pic" style="max-width: 60%;">
-        <img class="img2" src="https://i.postimg.cc/L5H6m78Z/PXL-20240127-072524720.jpg" alt="pic" style="max-width: 60%;">
+
+    <img class="hbd" src="https://i.postimg.cc/FsCjVnVZ/happy-birthday.png" alt="happy birthday">
+    <img class="cake" src="https://i.postimg.cc/KzycTLpb/cake.png" alt="cake">
+
+    <img onclick="mail()" id="mail-section" class="mail" src="https://i.postimg.cc/gjXyzpPS/mail.png" alt="mail">
+
+    <div class="popup" id="popup">
+      <div></div>
+      <div></div>
+      <div>
+        <div id="changeHtml">
+          <p>
+            Dear Mowmita,<br><br>
+            First of all, wishing you a very happy birthday. Amader modhe hoyto oivabe daily kotha hoy na, but anyway we are good friends. Actually tumi o busy thako saradin tomar porashuna niye and amio amar programming journey niye. Atodin porjonto ja ja shikhlam oituku diye try korlam akta wishing letter bananor jonno. Hoyto oto valo banaite pari nai karon akhono onek kisuy ami jani na, but I wish I will do better next time. Tomar kemon lagse jani na. But hey, it's a new day for you! Happy Birthday Mowmita....
+          </p>
+          <button onclick="change()">Next Page</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="name">Mowmita</h2>
+  </div>
+
+  <script>
+    function mail() {
+      document.getElementById("popup").style.display = "block";
+      document.getElementById("name").style.display = "none";
+      document.getElementById("mail-section").style.display = "none";
+    }
+
+    function change() {
+      document.getElementById("changeHtml").innerHTML = `
+        <img src="https://i.postimg.cc/G3JH6Pmy/PXL-20240523-093510007.jpg" alt="pic" style="max-width: 100%;">
+        <img class="img2" src="https://i.postimg.cc/L5H6m78Z/PXL-20240127-072524720.jpg" alt="pic">
         <h3>Happy Memories</h3>
         <button class="close" onclick="closeDiv()">Close</button>
-    `;
-}
+      `;
+    }
 
-function closeDiv() {
-    document.getElementById("popup").style.display = "none";
-}
-    </script>
+    function closeDiv() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
 </body>
 </html>
